@@ -6,7 +6,7 @@
  */
 
 import mongoose from 'mongoose';
-import { ROLES, USER_STATUS } from '../utils/constants.js';
+import { ROLES, USER_STATUS } from '../config/constants.js';
 
 const userSchema = new mongoose.Schema(
   {
@@ -55,4 +55,6 @@ userSchema.methods.isLocked = function () {
   return !!(this.lockUntil && this.lockUntil > Date.now());
 };
 
-module.exports = mongoose.model('User', userSchema);
+const User = mongoose.model('User', userSchema);
+export { User };
+export default User;

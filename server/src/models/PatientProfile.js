@@ -5,7 +5,6 @@
  * Features: Unique Patient ID (read-only), personal doctors (max 3), no-show tracking
  */
 
-
 import mongoose from 'mongoose';
 
 const patientProfileSchema = new mongoose.Schema(
@@ -84,4 +83,6 @@ const patientProfileSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model('PatientProfile', patientProfileSchema);
+const PatientProfile = mongoose.model('PatientProfile', patientProfileSchema);
+export { PatientProfile };
+export default PatientProfile;

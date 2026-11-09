@@ -16,3 +16,5 @@ const USER_STATUS = {
   SUSPENDED: 'suspended',
   REJECTED: 'rejected'
 };
+
+export { ROLES, USER_STATUS };
